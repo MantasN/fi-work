@@ -4,7 +4,7 @@
 % ----------------------------------------------------------------------------
 
 %% load day level data
-day_level_data = read_DTOHLCV('data/US1.MSFT_160701_160930_DAY.csv');
+day_level_data = read_data('data/US1.MSFT_160701_160930_DAY.csv');
 %% display day level data
 figure(1);
 plot(day_level_data.date, day_level_data.close);
@@ -14,7 +14,7 @@ xlabel('date');
 ylabel('close price');
 title('day level data close price');
 %% load min level data
-min_level_data = read_DTOHLCV('data/US1.MSFT_160901_160930_MIN.csv');
+min_level_data = read_data('data/US1.MSFT_160901_160930_MIN.csv');
 %% display min level data
 figure(2);
 plot(min_level_data.date, min_level_data.close);
@@ -24,7 +24,7 @@ xlabel('date');
 ylabel('close price');
 title('min level data close price');
 %% load tick data
-tick_level_data = read_DTLV('data/US1.MSFT_160930_160930_TICK.csv');
+tick_level_data = read_tick_data('data/US1.MSFT_160930_160930_TICK.csv');
 %% display tick level data
 figure(3); 
 hold on;
@@ -98,7 +98,7 @@ xlabel('hour');
 ylabel('close price');
 title('accumulated hour bars close price');
 %% load hour level data
-hour_level_data = read_DTOHLCV('data/US1.MSFT_160930_160930_HOUR.csv');
+hour_level_data = read_data('data/US1.MSFT_160930_160930_HOUR.csv');
 %% display hour level data
 figure(6); 
 plot(hour_level_data.date, hour_level_data.close);

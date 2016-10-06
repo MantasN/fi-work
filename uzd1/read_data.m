@@ -1,4 +1,4 @@
-function [data] = read_DTLV(file_name)
+function [data] = read_data(file_name)
 
 file = load(file_name);
 
@@ -10,5 +10,8 @@ min=floor((file(:,2)-hour*10000)/100);
 second=floor(file(:,2)-hour*10000-min*100);
 
 data.date = datenum(year,month,day,hour,min,second)';
-data.last = file(:,3)';
-data.volume = file(:,4)';
+data.open = file(:,3)';
+data.high = file(:,4)';
+data.low = file(:,5)';
+data.close = file(:,6)';
+data.volume = file(:,7)';
