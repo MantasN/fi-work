@@ -28,8 +28,8 @@ hold off;
 N = 14;
 
 th_tl_range = day_level_data.high - day_level_data.low;
-th_yc_range = day_level_data.high - day_level_data.close([1 1:end-1]);
-yc_tl_range = day_level_data.close([1 1:end-1]) - day_level_data.low;
+th_yc_range = abs(day_level_data.high - day_level_data.close([1 1:end-1]));
+yc_tl_range = abs(day_level_data.close([1 1:end-1]) - day_level_data.low);
 true_range = max([th_tl_range;th_yc_range;yc_tl_range],[],1);
 avg_true_range = moving_average(true_range, N);
 
