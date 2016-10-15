@@ -41,7 +41,7 @@ ylabel('volume');
 hold off;
 %% display random data
 figure(4);
-points_n = ceil(100 * rand);
+points_n = randi(100);
 dates = (now - points_n + 1):now;
 close_prices = cumsum(randn(1, points_n).*5);
 plot(dates, close_prices);
