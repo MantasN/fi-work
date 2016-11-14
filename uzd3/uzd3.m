@@ -153,10 +153,6 @@ xlabel('date');
 ylabel('profit');
 
 linkaxes([ax(1) ax(2)],'x');
-
-figure(8);
-datetick('x', 'mm/dd');
-plot(day_level_data.date, day_level_data.close - day_level_data.close([1 1:end-1]));
 %% display sharpe ratio heat map
 figure(4);
 imagesc(heat_map);
